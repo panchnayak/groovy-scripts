@@ -22,10 +22,9 @@ pipeline {
             steps {
                 script {
                     echo "Topic Names are  "+params.TOPIC_NAMES
-                    String a = params.TOPIC_NAMES
+                    //String a = params.TOPIC_NAMES
                     String[] str
-                    str = a.split(',')
-        
+                    str = params.TOPIC_NAMES.split(',')
                     for( String values : str )
                         println(values);
                     echo "Deploying EKS Cluster "+params.CLUSTER_NAME+" in the region:"+ params.REGION_NAME
