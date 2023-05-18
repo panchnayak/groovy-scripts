@@ -18,4 +18,5 @@ pipeline {
             sh 'echo "This is my Deploy step"'
             }
         }
+    }
 }
