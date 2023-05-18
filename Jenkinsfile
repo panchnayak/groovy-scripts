@@ -24,7 +24,7 @@ pipeline {
                     echo "Topic Names are  "+params.TOPIC_NAMES
                     String a = params.TOPIC_NAMES
                     String[] str
-                    str = a.split('_')
+                    str = a.split(',')
         
                     for( String values : str )
                         println(values);
